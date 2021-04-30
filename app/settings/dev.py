@@ -1,8 +1,8 @@
 import os
+
 import environ
 
 from app.settings.base import *
-
 
 env = environ.Env(DEBUG=(bool, False))
 # reading .env file
