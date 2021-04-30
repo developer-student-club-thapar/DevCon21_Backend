@@ -12,8 +12,8 @@ class ParticipantResource(resources.ModelResource):
 
 class ParticipantAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     model = Participant
-    list_display = ["__str__", "email", "institution", "mobile"]
-    list_filter = ["institution", "yos_designation", "referralCode"]
+    list_display = ["__str__", "email", "institution", "mobile", "event"]
+    list_filter = ["institution", "yos_designation", "referralCode", "event"]
 
 
 admin.site.register(Participant, ParticipantAdmin)

@@ -18,6 +18,7 @@ def participantForm(request):
             "yos_designation": request.POST["yos_designation"],
             "mobile": request.POST["mobile"],
             "referralCode": request.POST["referralCode"],
+            "event": request.POST["event"],
         }
 
         form = ParticipantForm(data)

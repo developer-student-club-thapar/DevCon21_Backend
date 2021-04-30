@@ -4,6 +4,11 @@ from django.core.validators import RegexValidator
 from django.db import models
 
 MOBILE_REGEX = "^(\+\d{1,3}[- ]?)?\d{10}$"  # noqa
+EVENT_CHOICES = (
+    ("Webinar", "Webinar"),
+    ("Designique", "Designique"),
+    ("Both", "Both"),
+)
 
 
 class Participant(models.Model):
@@ -23,6 +28,9 @@ class Participant(models.Model):
                 code="invalid_mobile",
             )
         ],
+    )
+    event = models.CharField(
+        max_length=15, choices=EVENT_CHOICES, default="Webinar"
     )
 
     def __str__(self):
