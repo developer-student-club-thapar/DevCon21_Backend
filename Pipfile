@@ -11,6 +11,9 @@ pre-commit = "*"
 django = "*"
 whitenoise = "*"
 django-cors-headers = "*"
+gunicorn = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.8"
