@@ -13,8 +13,7 @@ EVENT_CHOICES = (
 
 class Participant(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    firstName = models.CharField(max_length=255)
-    lastName = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
     institution = models.CharField(max_length=255)
     email = models.EmailField()
     referralCode = models.CharField(max_length=100, blank=True, null=True)
