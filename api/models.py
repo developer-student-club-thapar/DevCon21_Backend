@@ -33,4 +33,4 @@ class Participant(models.Model):
     )
 
     def __str__(self):
-        return f"{self.firstName} {self.lastName}"
+        return f"{self.name}"
