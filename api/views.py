@@ -11,8 +11,7 @@ def participantForm(request):
     if request.method == "POST":
 
         data = {
-            "firstName": request.POST["firstName"],
-            "lastName": request.POST["lastName"],
+            "name": request.POST["name"],
             "institution": request.POST["institution"],
             "email": request.POST["email"],
             "yos_designation": request.POST["yos_designation"],
