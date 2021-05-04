@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.http import HttpResponse, QueryDict
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
@@ -28,7 +29,16 @@ def participantForm(request):
                 return HttpResponse(
                     "Participant with email already registered.", status=404
                 )
+            # TODO: Make changes below
+            send_mail(
+                "Subject here",
+                "Here is the message.",
+                "noreplydev2@gmail.com",
+                [email],
+                fail_silently=False,
+            )
             form.save()
+
             return HttpResponse("Success")
 
         return HttpResponse("Bad form data", status=403)
