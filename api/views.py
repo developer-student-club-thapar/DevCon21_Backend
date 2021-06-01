@@ -35,7 +35,7 @@ def participantForm(request):
             "email": request.POST["email"],
             "yos_designation": request.POST["yos_designation"],
             "mobile": request.POST["mobile"],
-            "referralCode": request.POST["referralCode"],
+            "referralCode": request.POST["referralCode"].upper(),
             "event": request.POST["event"],
         }
 
@@ -49,16 +49,18 @@ def participantForm(request):
                 )
             form.save()
             # TODO: Make changes below
-            send_mail(
-                "Devcon21 Registration Successful!",
-                mail,
-                "noreplydevcon@gmail.com",
-                [email],
-                fail_silently=False,
-            )
+            # send_mail(
+            #     "Devcon21 Registration Successful!",
+            #     mail,
+            #     "noreplydevcon@gmail.com",
+            #     [email],
+            #     fail_silently=False,
+            # )
 
             return HttpResponse("Success")
 
-        return HttpResponse("Bad form data", status=403)
+        return HttpResponse(
+            "Please enter a valid 10 digit phone number!", status=403
+        )
 
     return HttpResponse("Only POST request allowed duhh.", status=403)
