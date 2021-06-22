@@ -15,7 +15,7 @@ Devcon'21 is a series of webinars, workshops and competitions held by some great
 
 Kindly join the discord server and Whatsapp group for further updates and connect with the community:
 Discord Server: https://discord.gg/8khTrtWWBT
-WhatsApp group: https://chat.whatsapp.com/FWoE9dXljeN46E5wuT9FCL
+WhatsApp group: https://minify.live/Devcon21WhatsApp
 
 Join us on our social media handles to know more about the event
 Instagram:https://instagram.com/ieee_ncu?utm_medium=copy_link
