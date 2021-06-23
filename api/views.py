@@ -49,13 +49,13 @@ def participantForm(request):
                 )
             form.save()
             # TODO: Make changes below
-            # send_mail(
-            #     "Devcon21 Registration Successful!",
-            #     mail,
-            #     "noreplydevcon@gmail.com",
-            #     [email],
-            #     fail_silently=False,
-            # )
+            send_mail(
+                "Devcon21 Registration Successful!",
+                mail,
+                "noreplydevcon@gmail.com",
+                [email],
+                fail_silently=False,
+            )
 
             return HttpResponse("Success")
 
